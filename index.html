@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetShop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+        }
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+        }
+        .carousel img {
+            width:800;
+            height: 400;
+            scroll-snap-align: center;
+        }
+        .product, .service {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>PetShop</h1>
+        <p>Bem-vindo ao nosso PetShop! Aqui você encontra os melhores produtos e serviços para seu pet.</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Produtos</a>
+        <a href="#services">Serviços</a>
+        <a href="#register">Cadastro</a>
+        <a href="#contact">Contato</a>
+    </nav>
+
+    <div class="container">
+        <section id="home">
+            <h2>Bem-vindo ao PetShop</h2>
+            <div class="carousel">
+                <img src="https://static.vecteezy.com/ti/vetor-gratis/t1/7420718-pet-shop-banner-design-template-vector-cartoon-illustration-of-cats-dogs-house-food-vetor.jpg" alt="Imagem 1">
+            
+            </div>
+        </section>
+
+        <section id="products">
+            <h2>Produtos</h2>
+            <div class="product">
+                <img src="data:image/jpeg;base64,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" alt="Produto 1">
+                <p>Coleira</p>
+                <p>Valor: R$ 100,00</p>
+            </div>
+            <div class="product">
+                <img src="https://images.tcdn.com.br/img/img_prod/1195279/kit_10_mordedores_brinquedos_pet_p_cachorros_pequenos_65_1_3423a41db8ab97072c5bda9e6739c011.jpg" alt="Produto 2" width="320" height="205">
+                <p>Mordedor de cachorro</p>
+                <p>Valor: R$ 50,00</p>
+            </div>
+        </section>
+
+        <section id="services">
+            <h2>Serviços</h2>
+            <div class="service">
+                <p>Banho e Tosa</p>
+                <p>Valor: R$ 50,00</p>
+            </div>
+            <div class="service">
+                <p>Consulta Veterinária</p>
+                <p>Valor: R$ 150,00</p>
+            </div>
+        </section>
+
+
+
+            <!--FORMS CADASTRO-->>
+
+
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 20px;
+                }
+                form {
+                    max-width: 600px;
+                    margin: 0 auto;
+                    background-color: #f9f9f9;
+                    padding: 20px;
+                    border-radius: 8px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                }
+                label {
+                    font-weight: bold;
+                }
+                input[type="text"], input[type="tel"], input[type="email"], select, input[type="date"] {
+                    width: 100%;
+                    padding: 8px;
+                    margin-bottom: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                }
+                input[type="checkbox"] {
+                    margin-top: 10px;
+                }
+                input[type="submit"] {
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    opacity: 0.5; /* Inicialmente opaco */
+                    pointer-events: none; /* Inicialmente desabilitado */
+                }
+                input[type="submit"]:hover {
+                    background-color: #45a049;
+                }
+                input[type="submit"].enabled {
+                    opacity: 1; /* Habilita quando todos os campos estão preenchidos */
+                    pointer-events: auto;
+                }
+            </style>
+        </head>
+        <body>
+        
+            <form action="cadastrado.html" onsubmit="return validateForm()">
+                <label for="name">Nome:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="address">Endereço:</label><br>
+                <input type="text" id="address" name="address" required><br>
+                <label for="phone">Telefone:</label><br>
+                <input type="tel" id="phone" name="phone" required><br>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" required><br>
+        
+                <h3>Cadastro do Pet</h3>
+                <label for="petName">Nome do Pet:</label><br>
+                <input type="text" id="petName" name="petName"><br>
+                <label for="petType">Tipo:</label><br>
+                <input type="text" id="petType" name="petType"><br>
+                <label for="breed">Raça:</label><br>
+                <input type="text" id="breed" name="breed"><br>
+                <label for="temperament">Temperamento:</label><br>
+                <input type="text" id="temperament" name="temperament"><br>
+        
+                <h3>Escolha do Serviço</h3>
+                <label for="service">Serviço:</label><br>
+                <select id="service" name="service">
+                    <option value="banhoTosa">Banho e Tosa</option>
+                    <option value="consultaVet">Consulta Veterinária</option>
+                </select><br>
+                <label for="date">Data de Agendamento:</label><br>
+                <input type="date" id="date" name="date"><br>
+                <label for="telebusca">Tele-Busca:</label><br>
+                <input type="checkbox" id="telebusca" name="telebusca"> Sim<br>
+        
+                <input type="submit" value="Cadastrar" id="submitBtn">
+            </form>
+        
+            <script>
+                // Função para validar o formulário antes do envio
+                function validateForm() {
+                    // Verifica se os campos obrigatórios estão preenchidos
+                    var name = document.getElementById('name').value.trim();
+                    var address = document.getElementById('address').value.trim();
+                    var phone = document.getElementById('phone').value.trim();
+                    var email = document.getElementById('email').value.trim();
+        
+                    if (name === '' || address === '' || phone === '' || email === '') {
+                        alert('Por favor, preencha todos os campos obrigatórios.');
+                        return false; // Impede o envio do formulário se campos obrigatórios estiverem vazios
+                    }
+        
+                    // Você pode adicionar mais validações conforme necessário
+        
+                    return true; // Permite o envio do formulário se tudo estiver validado
+                }
+        
+                // Função para verificar se todos os campos estão preenchidos e habilitar o botão
+                function checkFieldsFilled() {
+                    var name = document.getElementById('name').value.trim();
+                    var address = document.getElementById('address').value.trim();
+                    var phone = document.getElementById('phone').value.trim();
+                    var email = document.getElementById('email').value.trim();
+        
+                    var submitBtn = document.getElementById('submitBtn');
+        
+                    if (name !== '' && address !== '' && phone !== '' && email !== '') {
+                        submitBtn.classList.add('enabled');
+                    } else {
+                        submitBtn.classList.remove('enabled');
+                    }
+                }
+        
+                // Adiciona um evento de escuta para verificar campos ao alterar qualquer campo do formulário
+                var formInputs = document.querySelectorAll('input, select');
+                formInputs.forEach(function(input) {
+                    input.addEventListener('change', checkFieldsFilled);
+                });
+            </script>
+    </div>
+
+    <footer>
+        <p>&copy; Allan Souza. Todos os direitos reservados.</p>
+        <p>Contato: contato@petshop.com.br</p>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Produtos</a>
+            <a href="#services">Serviços</a>
+            <a href="#register">Cadastro</a>
+            <a href="#contact">Contato</a>
+        </nav>
+    </footer>
+
+</body>
+</html>
